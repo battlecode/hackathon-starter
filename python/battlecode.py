@@ -29,6 +29,7 @@ GRASS = 'G'
 DIRT = 'D'
 
 THROW_RANGE = 7
+THROW_HEDGE_DAMAGE = 1
 THROW_ENTITY_DAMAGE = 4
 THROW_ENTITY_RECOIL = 2
 THROW_ENTITY_DIRT = 1
@@ -607,7 +608,10 @@ class Entity(object):
 
             target = self._state.map._occupied.get(target_loc, None)
             if(target != None):
-                target._deal_damage(THROW_ENTITY_DAMAGE)
+                if(target.type == Entity.HEDGE):
+                    target._deal_damage(THROW_HEDGE_DAMAGE)
+                else:
+                    target._deal_damage(THROW_ENTITY_DAMAGE)
                 held._deal_damage(THROW_ENTITY_RECOIL)
 
             landing_location = Location(target_loc.x - direction.dx, \
