@@ -1090,8 +1090,10 @@ class State(object):
             ent = self.entities[dead]
             if(ent.held_by == None):
                 if self.map._occupied[ent.location].id == ent.id:
-                    del self.map._occupied[ent.location]
-            del self.entities[dead]
+                    if ent.location in self.map._occupied:
+                        del self.map._occupied[ent.location]
+            if dead in self.entities:
+                del self.entities[dead]
 
     def _validate(self):
         for ent in self.entities.values():
