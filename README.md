@@ -1,6 +1,7 @@
 # BATTLECODE HACKATHON
+Welcome to the battlecode hackathon!
 
-1-minute setup:
+## 1-minute setup:
 - Download a copy of this repository [here](TODO) or fork / clone it
 - Install a recent version of [node.js](https://nodejs.org/en/) (> 8)
 - Open a terminal / command prompt
@@ -11,6 +12,12 @@
 - Now do that again in a third terminal
 - You should now be able to watch a game run in your browser
 - Open `player.py` and start hacking!
+
+## Bigger overview
+
+## Specs
+
+## API docs
 
 ## Other languages
 - Java:
