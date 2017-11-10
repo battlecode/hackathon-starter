@@ -1,0 +1,1 @@
+java -jar <your_package_name.jar>
