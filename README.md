@@ -3,7 +3,7 @@ Welcome to the battlecode hackathon!
 
 ## 1-minute setup:
 - Download a copy of this repository [here](https://github.com/battlecode/hackathon-starter/) or fork / clone it.
-- Install a recent version of [node.js](https://nodejs.org/en/) (> 8). If you already have Node installed, you can check which version you have with `node -- version` in your terminal.
+- Install a recent version of [node.js](https://nodejs.org/en/) (> 8). If you already have Node installed, you can check which version you have with `node --version` in your terminal.
 - Open a terminal / command prompt.
 - Run `npm install -g @battlecode/battlehack`.
     - If you're on linux, you might need `sudo`.
