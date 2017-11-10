@@ -1,0 +1,709 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module battlecode</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>battlecode</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/joshua/Battlecode/hackathon-starter/python/battlecode.py">/home/joshua/Battlecode/hackathon-starter/python/battlecode.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="io.html">io</a><br>
+<a href="json.html">json</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="signal.html">signal</a><br>
+</td><td width="25%" valign=top><a href="socket.html">socket</a><br>
+<a href="sys.html">sys</a><br>
+<a href="threading.html">threading</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="battlecode.html#Direction">Direction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="battlecode.html#Entity">Entity</a>
+</font></dt><dt><font face="helvetica, arial"><a href="battlecode.html#Game">Game</a>
+</font></dt><dt><font face="helvetica, arial"><a href="battlecode.html#Map">Map</a>
+</font></dt><dt><font face="helvetica, arial"><a href="battlecode.html#Sector">Sector</a>
+</font></dt><dt><font face="helvetica, arial"><a href="battlecode.html#State">State</a>
+</font></dt><dt><font face="helvetica, arial"><a href="battlecode.html#Team">Team</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#tuple">__builtin__.tuple</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="battlecode.html#Location">Location</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="battlecode.html#BattlecodeError">BattlecodeError</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BattlecodeError">class <strong>BattlecodeError</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="battlecode.html#BattlecodeError">BattlecodeError</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BattlecodeError-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#BattlecodeError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="BattlecodeError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#BattlecodeError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="BattlecodeError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#BattlecodeError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="BattlecodeError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#BattlecodeError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="BattlecodeError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#BattlecodeError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="BattlecodeError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="BattlecodeError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#BattlecodeError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="BattlecodeError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#BattlecodeError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="BattlecodeError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="BattlecodeError-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#BattlecodeError-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="BattlecodeError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Direction">class <strong>Direction</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;is&nbsp;an&nbsp;enum&nbsp;for&nbsp;direction<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Direction-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Direction-__init__"><strong>__init__</strong></a>(self, dx, dy)</dt><dd><tt>Initialize&nbsp;a&nbsp;<a href="#Direction">Direction</a>&nbsp;with&nbsp;given&nbsp;delta&nbsp;x&nbsp;and&nbsp;delta&nbsp;y.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dx&nbsp;(int):&nbsp;the&nbsp;delta&nbsp;in&nbsp;the&nbsp;x&nbsp;direction&nbsp;which&nbsp;has&nbsp;to&nbsp;be&nbsp;in&nbsp;range&nbsp;1,0,-1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dy&nbsp;(int):&nbsp;the&nbsp;delta&nbsp;in&nbsp;the&nbsp;y&nbsp;direction&nbsp;which&nbsp;has&nbsp;to&nbsp;be&nbsp;in&nbsp;range&nbsp;1,0,-1<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;A&nbsp;new&nbsp;direction&nbsp;with&nbsp;given&nbsp;dx&nbsp;and&nbsp;dy</tt></dd></dl>
+
+<dl><dt><a name="Direction-rotate_counter_clockwise_degrees"><strong>rotate_counter_clockwise_degrees</strong></a>(self, degrees)</dt><dd><tt>Rotate&nbsp;an&nbsp;angle&nbsp;by&nbsp;given&nbsp;number&nbsp;of&nbsp;degrees.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;degree&nbsp;(int):&nbsp;degree&nbsp;to&nbsp;rotate&nbsp;counter&nbsp;clockwise&nbsp;by.&nbsp;Must&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;degree%45==0<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;a&nbsp;new&nbsp;rotated&nbsp;<a href="#Direction">Direction</a></tt></dd></dl>
+
+<dl><dt><a name="Direction-rotate_left"><strong>rotate_left</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;direction&nbsp;that&nbsp;is&nbsp;90&nbsp;degrees&nbsp;left&nbsp;from&nbsp;the&nbsp;original.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;A&nbsp;new&nbsp;<a href="#Direction">Direction</a>&nbsp;rotated&nbsp;90&nbsp;degrees&nbsp;to&nbsp;the&nbsp;left</tt></dd></dl>
+
+<dl><dt><a name="Direction-rotate_opposite"><strong>rotate_opposite</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;direction&nbsp;that&nbsp;is&nbsp;180&nbsp;degrees&nbsp;rotated&nbsp;from&nbsp;the&nbsp;original.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;A&nbsp;new&nbsp;direction&nbsp;opposite&nbsp;to&nbsp;the&nbsp;original</tt></dd></dl>
+
+<dl><dt><a name="Direction-rotate_right"><strong>rotate_right</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;direction&nbsp;that&nbsp;is&nbsp;90&nbsp;degrees&nbsp;right&nbsp;from&nbsp;the&nbsp;original.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;A&nbsp;new&nbsp;<a href="#Direction">Direction</a>&nbsp;rotated&nbsp;90&nbsp;degrees&nbsp;to&nbsp;the&nbsp;right</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Direction-all"><strong>all</strong></a>()</dt><dd><tt>returns&nbsp;an&nbsp;generator&nbsp;to&nbsp;Directions<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;An&nbsp;generator&nbsp;of&nbsp;all&nbsp;compass&nbsp;directions</tt></dd></dl>
+
+<dl><dt><a name="Direction-directions"><strong>directions</strong></a>()</dt><dd><tt>returns&nbsp;an&nbsp;array&nbsp;of&nbsp;all&nbsp;compass&nbsp;directions.&nbsp;It&nbsp;starts&nbsp;with&nbsp;SOUTH_WEST<br>
+and&nbsp;proceeds&nbsp;counter-clockwise&nbsp;around&nbsp;the&nbsp;compass.<br>
+This&nbsp;array&nbsp;is&nbsp;deterministic.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[<a href="#Direction">Direction</a>]:&nbsp;An&nbsp;array&nbsp;of&nbsp;all&nbsp;compass&nbsp;directions</tt></dd></dl>
+
+<dl><dt><a name="Direction-from_delta"><strong>from_delta</strong></a>(dx, dy)</dt><dd><tt>Initializes&nbsp;a&nbsp;<a href="#Direction">Direction</a>&nbsp;from&nbsp;a&nbsp;delta&nbsp;dx,&nbsp;dy.&nbsp;This&nbsp;finds&nbsp;the&nbsp;cardinal<br>
+direction&nbsp;closest&nbsp;to&nbsp;the&nbsp;desired&nbsp;delta.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dx&nbsp;(int):&nbsp;delta&nbsp;in&nbsp;x&nbsp;direction<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dy&nbsp;(int):&nbsp;delta&nbsp;in&nbsp;y&nbsp;direction<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Both&nbsp;arguments&nbsp;cannot&nbsp;be&nbsp;zero<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;a&nbsp;new&nbsp;<a href="#Direction">Direction</a>&nbsp;for&nbsp;that&nbsp;delta</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>EAST</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+<dl><dt><strong>NORTH</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+<dl><dt><strong>NORTH_EAST</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+<dl><dt><strong>NORTH_WEST</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+<dl><dt><strong>SOUTH</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+<dl><dt><strong>SOUTH_EAST</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+<dl><dt><strong>SOUTH_WEST</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+<dl><dt><strong>WEST</strong> = &lt;battlecode.Direction object&gt;</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Entity">class <strong>Entity</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>An&nbsp;entity&nbsp;in&nbsp;the&nbsp;world:&nbsp;a&nbsp;Thrower,&nbsp;Hedge,&nbsp;or&nbsp;Statue.<br>
+&nbsp;<br>
+Do&nbsp;not&nbsp;modify&nbsp;the&nbsp;properties&nbsp;of&nbsp;this&nbsp;<a href="__builtin__.html#object">object</a>;&nbsp;it&nbsp;won't&nbsp;do&nbsp;anything<br>
+Instead,&nbsp;call&nbsp;the&nbsp;queue&nbsp;functions&nbsp;such&nbsp;as&nbsp;entity.<a href="#Entity-queue_move">queue_move</a>()&nbsp;and&nbsp;other<br>
+methods&nbsp;to&nbsp;tell&nbsp;the&nbsp;game&nbsp;to&nbsp;do&nbsp;something&nbsp;next&nbsp;turn.<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;(int):&nbsp;the&nbsp;id&nbsp;of&nbsp;a&nbsp;entity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;(string):&nbsp;String&nbsp;type&nbsp;of&nbsp;a&nbsp;given&nbsp;entity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;team&nbsp;(<a href="#Team">Team</a>):&nbsp;team&nbsp;of&nbsp;entity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hp&nbsp;(int):&nbsp;hp&nbsp;of&nbsp;entity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cooldown_end&nbsp;(int):&nbsp;turn&nbsp;when&nbsp;cooldown&nbsp;is&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;held_by&nbsp;(<a href="#Entity">Entity</a>):&nbsp;<a href="#Entity">Entity</a>&nbsp;holding&nbsp;this&nbsp;<a href="__builtin__.html#object">object</a>.&nbsp;If&nbsp;not&nbsp;held&nbsp;held_by&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;holding&nbsp;(<a href="#Entity">Entity</a>):&nbsp;<a href="#Entity">Entity</a>&nbsp;held&nbsp;by&nbsp;this.&nbsp;If&nbsp;nothing&nbsp;is&nbsp;held&nbsp;holding&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;None<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Entity-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Entity-__init__"><strong>__init__</strong></a>(self, state)</dt><dd><tt>Do&nbsp;not&nbsp;initialize&nbsp;new&nbsp;entities.&nbsp;This&nbsp;will&nbsp;cause&nbsp;errors&nbsp;in&nbsp;your<br>
+bot.</tt></dd></dl>
+
+<dl><dt><a name="Entity-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Entity-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Entity-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Entity-can_build"><strong>can_build</strong></a>(self, direction)</dt><dd><tt>This&nbsp;is&nbsp;true&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;the&nbsp;adjacent&nbsp;tile&nbsp;in&nbsp;that<br>
+direction&nbsp;and&nbsp;the&nbsp;tile&nbsp;is&nbsp;on&nbsp;the&nbsp;map.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction&nbsp;(<a href="#Direction">Direction</a>):&nbsp;<a href="#Direction">Direction</a>&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;build&nbsp;in<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;a&nbsp;unit&nbsp;can&nbsp;build&nbsp;in&nbsp;this&nbsp;direction</tt></dd></dl>
+
+<dl><dt><a name="Entity-can_move"><strong>can_move</strong></a>(self, direction)</dt><dd><tt>Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction&nbsp;(<a href="#Direction">Direction</a>):&nbsp;<a href="#Direction">Direction</a>&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;move&nbsp;in<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;a&nbsp;unit&nbsp;can&nbsp;move&nbsp;in&nbsp;this&nbsp;direction</tt></dd></dl>
+
+<dl><dt><a name="Entity-can_pickup"><strong>can_pickup</strong></a>(self, entity)</dt><dd><tt>This&nbsp;is&nbsp;true&nbsp;if&nbsp;the&nbsp;other&nbsp;entity&nbsp;can&nbsp;be&nbsp;picked&nbsp;up&nbsp;which&nbsp;means.<br>
+The&nbsp;entity&nbsp;cannot&nbsp;be&nbsp;self.<br>
+Self&nbsp;cannot&nbsp;be&nbsp;holding&nbsp;anything,&nbsp;and&nbsp;the&nbsp;entity&nbsp;cannot&nbsp;be&nbsp;held<br>
+The&nbsp;two&nbsp;entities&nbsp;must&nbsp;be&nbsp;adjacent.<br>
+The&nbsp;entity&nbsp;cannot&nbsp;has&nbsp;to&nbsp;be&nbsp;a&nbsp;THROWER.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entity&nbsp;(<a href="#Entity">Entity</a>):&nbsp;The&nbsp;entity&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;pickup<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;this&nbsp;can&nbsp;pickup&nbsp;said&nbsp;entity</tt></dd></dl>
+
+<dl><dt><a name="Entity-can_throw"><strong>can_throw</strong></a>(self, direction)</dt><dd><tt>To&nbsp;throw&nbsp;an&nbsp;entity.<br>
+Self&nbsp;has&nbsp;to&nbsp;be&nbsp;holding&nbsp;a&nbsp;unit&nbsp;and&nbsp;self&nbsp;has&nbsp;to&nbsp;be&nbsp;able&nbsp;to&nbsp;act.<br>
+The&nbsp;adjacent&nbsp;square&nbsp;in&nbsp;the&nbsp;given&nbsp;direction&nbsp;has&nbsp;to&nbsp;be&nbsp;on&nbsp;the&nbsp;map&nbsp;and&nbsp;not<br>
+occupied.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction&nbsp;(<a href="#Direction">Direction</a>):&nbsp;<a href="#Direction">Direction</a>&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;throw&nbsp;its<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;held&nbsp;entity<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;this&nbsp;entity&nbsp;thrown&nbsp;in&nbsp;given&nbsp;direction</tt></dd></dl>
+
+<dl><dt><a name="Entity-entities_within_adjacent_distance"><strong>entities_within_adjacent_distance</strong></a>(self, distance, include_held<font color="#909090">=False</font>, iterator<font color="#909090">=None</font>)</dt><dd><tt>Returns&nbsp;all&nbsp;the&nbsp;entities&nbsp;within&nbsp;a&nbsp;certain&nbsp;adjacency&nbsp;distance&nbsp;from&nbsp;this<br>
+bot&nbsp;as&nbsp;an&nbsp;generator.<br>
+Adjacency&nbsp;distance&nbsp;is&nbsp;the&nbsp;number&nbsp;of&nbsp;adjacent&nbsp;blocks&nbsp;needed&nbsp;to&nbsp;traverse<br>
+to&nbsp;get&nbsp;to&nbsp;a&nbsp;tile,&nbsp;which&nbsp;is&nbsp;equivalent&nbsp;to&nbsp;max(abs(deltax),&nbsp;abs(deltay))<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;distance&nbsp;(float):&nbsp;returns&nbsp;all&nbsp;entities&nbsp;with&nbsp;distance&nbsp;less&nbsp;than&nbsp;&lt;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distance<br>
+&nbsp;<br>
+Options&nbsp;Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;include_held&nbsp;(bool):&nbsp;Defaults&nbsp;to&nbsp;false.&nbsp;If&nbsp;true&nbsp;held&nbsp;units&nbsp;will&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;included&nbsp;in&nbsp;the&nbsp;iterator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;iterator&nbsp;(iterator&nbsp;or&nbsp;list):&nbsp;A&nbsp;subset&nbsp;of&nbsp;bots&nbsp;to&nbsp;iterate&nbsp;through.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will&nbsp;only&nbsp;search&nbsp;the&nbsp;bots&nbsp;in&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iterator<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[Entities]:&nbsp;Returns&nbsp;a&nbsp;generator&nbsp;for&nbsp;the&nbsp;entities&nbsp;within&nbsp;distance&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;this&nbsp;robot</tt></dd></dl>
+
+<dl><dt><a name="Entity-entities_within_euclidean_distance"><strong>entities_within_euclidean_distance</strong></a>(self, distance, include_held<font color="#909090">=False</font>, iterator<font color="#909090">=None</font>)</dt><dd><tt>Returns&nbsp;all&nbsp;the&nbsp;entities&nbsp;within&nbsp;a&nbsp;certain&nbsp;Euclidean&nbsp;distance&nbsp;from&nbsp;this<br>
+bot&nbsp;as&nbsp;an&nbsp;generator.<br>
+Euclidean&nbsp;distance&nbsp;is&nbsp;defined&nbsp;as&nbsp;sqrt(deltax^2+deltay^2)<br>
+Not&nbsp;to&nbsp;be&nbsp;confused&nbsp;with&nbsp;displacement&nbsp;difference,&nbsp;which&nbsp;is<br>
+max(deltax,deltay)<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;distance&nbsp;(float):&nbsp;returns&nbsp;all&nbsp;entities&nbsp;with&nbsp;distance&nbsp;less&nbsp;than&nbsp;&lt;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distance<br>
+&nbsp;<br>
+Options&nbsp;Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;include_held&nbsp;(bool):&nbsp;Defaults&nbsp;to&nbsp;false.&nbsp;If&nbsp;true&nbsp;held&nbsp;units&nbsp;will&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;included&nbsp;in&nbsp;the&nbsp;iterator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;iterator&nbsp;(iterator&nbsp;or&nbsp;list):&nbsp;A&nbsp;subset&nbsp;of&nbsp;bots&nbsp;to&nbsp;iterate&nbsp;through.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will&nbsp;only&nbsp;search&nbsp;the&nbsp;bots&nbsp;in&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iterator<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[Entities]:&nbsp;Returns&nbsp;a&nbsp;generator&nbsp;for&nbsp;the&nbsp;entities&nbsp;within&nbsp;distance&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;this&nbsp;robot</tt></dd></dl>
+
+<dl><dt><a name="Entity-queue_build"><strong>queue_build</strong></a>(self, direction)</dt><dd><tt>Queues&nbsp;build&nbsp;to&nbsp;take&nbsp;place&nbsp;next&nbsp;turn.&nbsp;Throws&nbsp;an&nbsp;assertion&nbsp;error&nbsp;if&nbsp;cannot<br>
+build&nbsp;in&nbsp;given&nbsp;direction.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction&nbsp;(<a href="#Direction">Direction</a>):&nbsp;<a href="#Direction">Direction</a>&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;build&nbsp;in</tt></dd></dl>
+
+<dl><dt><a name="Entity-queue_disintegrate"><strong>queue_disintegrate</strong></a>(self)</dt><dd><tt>Queues&nbsp;a&nbsp;disintegration,&nbsp;so&nbsp;that&nbsp;this&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;will&nbsp;disintegrate&nbsp;in&nbsp;the<br>
+next&nbsp;turn.</tt></dd></dl>
+
+<dl><dt><a name="Entity-queue_move"><strong>queue_move</strong></a>(self, direction)</dt><dd><tt>Queues&nbsp;Move&nbsp;to&nbsp;take&nbsp;place&nbsp;next&nbsp;turn.&nbsp;Throws&nbsp;an&nbsp;assertion&nbsp;error&nbsp;if&nbsp;cannot<br>
+move&nbsp;in&nbsp;given&nbsp;direction.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction&nbsp;(<a href="#Direction">Direction</a>):&nbsp;<a href="#Direction">Direction</a>&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;move&nbsp;in</tt></dd></dl>
+
+<dl><dt><a name="Entity-queue_pickup"><strong>queue_pickup</strong></a>(self, entity)</dt><dd><tt>Queues&nbsp;this&nbsp;to&nbsp;pickup&nbsp;entity&nbsp;next&nbsp;turn.&nbsp;If&nbsp;this&nbsp;cannot&nbsp;pickup&nbsp;entity<br>
+will&nbsp;throw&nbsp;an&nbsp;assertion&nbsp;error.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entity&nbsp;(<a href="#Entity">Entity</a>):&nbsp;The&nbsp;entity&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;pickup</tt></dd></dl>
+
+<dl><dt><a name="Entity-queue_throw"><strong>queue_throw</strong></a>(self, direction)</dt><dd><tt>Queue&nbsp;this&nbsp;entity&nbsp;to&nbsp;throw&nbsp;a&nbsp;bot&nbsp;in&nbsp;given&nbsp;direction&nbsp;next&nbsp;turn.&nbsp;If&nbsp;this<br>
+cannot&nbsp;throw,&nbsp;will&nbsp;throw&nbsp;an&nbsp;assertion.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction&nbsp;(<a href="#Direction">Direction</a>):&nbsp;<a href="#Direction">Direction</a>&nbsp;this&nbsp;entity&nbsp;desires&nbsp;to&nbsp;throw&nbsp;its<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;held&nbsp;entity</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>can_act</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;this&nbsp;unit&nbsp;can&nbsp;perform&nbsp;actions&nbsp;this&nbsp;turn.</tt></dd>
+</dl>
+<dl><dt><strong>can_be_picked</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;this&nbsp;entity&nbsp;can&nbsp;be&nbsp;picked&nbsp;up</tt></dd>
+</dl>
+<dl><dt><strong>cooldown</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;The&nbsp;number&nbsp;of&nbsp;turns&nbsp;left&nbsp;in&nbsp;this&nbsp;entity's&nbsp;cooldown.&nbsp;If<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;there&nbsp;is&nbsp;no&nbsp;cooldown&nbsp;then&nbsp;is&nbsp;a&nbsp;0.</tt></dd>
+</dl>
+<dl><dt><strong>is_hedge</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;a&nbsp;entity&nbsp;is&nbsp;a&nbsp;HEDGE&nbsp;else&nbsp;False.</tt></dd>
+</dl>
+<dl><dt><strong>is_held</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;held&nbsp;by&nbsp;an&nbsp;entity&nbsp;else&nbsp;False</tt></dd>
+</dl>
+<dl><dt><strong>is_holding</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;holding&nbsp;an&nbsp;entity&nbsp;else&nbsp;False</tt></dd>
+</dl>
+<dl><dt><strong>is_statue</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;a&nbsp;entity&nbsp;is&nbsp;a&nbsp;STATUE&nbsp;else&nbsp;False.</tt></dd>
+</dl>
+<dl><dt><strong>is_thrower</strong></dt>
+<dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;a&nbsp;entity&nbsp;is&nbsp;a&nbsp;THROWER&nbsp;else&nbsp;False.</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>HEDGE</strong> = 'hedge'</dl>
+
+<dl><dt><strong>STATUE</strong> = 'statue'</dl>
+
+<dl><dt><strong>THROWER</strong> = 'thrower'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Game">class <strong>Game</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;is&nbsp;the&nbsp;game&nbsp;that&nbsp;is&nbsp;being&nbsp;played.<br>
+Running&nbsp;the&nbsp;init&nbsp;connects&nbsp;your&nbsp;code&nbsp;to&nbsp;the&nbsp;engine&nbsp;to&nbsp;play&nbsp;the&nbsp;game<br>
+Create&nbsp;a&nbsp;for&nbsp;loop&nbsp;which&nbsp;iterates&nbsp;through&nbsp;game.turns&nbsp;to&nbsp;play&nbsp;the&nbsp;game.&nbsp;It<br>
+will&nbsp;give&nbsp;a&nbsp;state&nbsp;for&nbsp;each&nbsp;turn&nbsp;with&nbsp;which&nbsp;you&nbsp;can&nbsp;see&nbsp;and&nbsp;perform<br>
+actions.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Game-__init__"><strong>__init__</strong></a>(self, name, server<font color="#909090">=('localhost', 6147)</font>)</dt><dd><tt>Connect&nbsp;to&nbsp;the&nbsp;server&nbsp;and&nbsp;wait&nbsp;for&nbsp;the&nbsp;first&nbsp;turn.<br>
+name&nbsp;is&nbsp;the&nbsp;name&nbsp;this&nbsp;bot&nbsp;would&nbsp;like&nbsp;to&nbsp;be&nbsp;called;&nbsp;it&nbsp;will&nbsp;be&nbsp;ignored&nbsp;on&nbsp;the<br>
+scrimmage&nbsp;server.<br>
+Server&nbsp;is&nbsp;the&nbsp;address&nbsp;to&nbsp;connect&nbsp;to.&nbsp;Leave&nbsp;it&nbsp;as&nbsp;None&nbsp;to&nbsp;connect&nbsp;to&nbsp;a&nbsp;default&nbsp;local<br>
+server;&nbsp;you&nbsp;shouldn't&nbsp;need&nbsp;to&nbsp;mess&nbsp;with&nbsp;it&nbsp;unless&nbsp;you're&nbsp;making&nbsp;custom&nbsp;matchmaking&nbsp;stuff.</tt></dd></dl>
+
+<dl><dt><a name="Game-next_turn"><strong>next_turn</strong></a>(self)</dt><dd><tt>Submit&nbsp;queued&nbsp;actions,&nbsp;and&nbsp;wait&nbsp;for&nbsp;our&nbsp;next&nbsp;turn.</tt></dd></dl>
+
+<dl><dt><a name="Game-turns"><strong>turns</strong></a>(self, copy<font color="#909090">=True</font>, speculate<font color="#909090">=True</font>)</dt><dd><tt>Returns&nbsp;an&nbsp;iterator.&nbsp;You&nbsp;should&nbsp;for&nbsp;loop&nbsp;over&nbsp;this&nbsp;function&nbsp;to&nbsp;get&nbsp;a<br>
+copy&nbsp;of&nbsp;state&nbsp;for&nbsp;each&nbsp;turn.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#State">State</a>:&nbsp;a&nbsp;state&nbsp;that&nbsp;you&nbsp;can&nbsp;play&nbsp;on</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Location">class <strong>Location</strong></a>(<a href="__builtin__.html#tuple">__builtin__.tuple</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>An&nbsp;x,y&nbsp;<a href="__builtin__.html#tuple">tuple</a>&nbsp;representing&nbsp;a&nbsp;location&nbsp;in&nbsp;the&nbsp;world.<br>
+This&nbsp;class&nbsp;is&nbsp;immutable.<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(int):&nbsp;x&nbsp;coordinate&nbsp;of&nbsp;location<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;(int):&nbsp;y&nbsp;coordinate&nbsp;of&nbsp;location<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="battlecode.html#Location">Location</a></dd>
+<dd><a href="__builtin__.html#tuple">__builtin__.tuple</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Location-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Location-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="Location-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Location-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Location-adjacent_distance_to"><strong>adjacent_distance_to</strong></a>(self, location)</dt><dd><tt>Return&nbsp;adjacent&nbsp;distance&nbsp;from&nbsp;self&nbsp;to&nbsp;other&nbsp;location.<br>
+This&nbsp;is&nbsp;defined&nbsp;as&nbsp;max(abs(deltax),abs(deltay)),&nbsp;and&nbsp;is&nbsp;the&nbsp;number&nbsp;of<br>
+adjacent&nbsp;moves&nbsp;needed&nbsp;to&nbsp;get&nbsp;to&nbsp;a&nbsp;location.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;location&nbsp;we&nbsp;are&nbsp;trying&nbsp;to&nbsp;find&nbsp;the&nbsp;distance&nbsp;to<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;Distance&nbsp;squared&nbsp;to&nbsp;the&nbsp;location</tt></dd></dl>
+
+<dl><dt><a name="Location-adjacent_location_in_direction"><strong>adjacent_location_in_direction</strong></a>(self, direction)</dt><dd><tt>Returns&nbsp;the&nbsp;location&nbsp;the&nbsp;is&nbsp;adjacent&nbsp;to&nbsp;a&nbsp;this&nbsp;in&nbsp;a&nbsp;certain&nbsp;direction.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction&nbsp;(<a href="#Direction">Direction</a>):&nbsp;<a href="#Direction">Direction</a>&nbsp;that&nbsp;adjacency&nbsp;is&nbsp;desired<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Location">Location</a>:&nbsp;<a href="#Location">Location</a>&nbsp;of&nbsp;the&nbsp;adjacent&nbsp;tile.&nbsp;Note&nbsp;this&nbsp;is&nbsp;not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;necessarily&nbsp;on&nbsp;the&nbsp;map.</tt></dd></dl>
+
+<dl><dt><a name="Location-direction_to"><strong>direction_to</strong></a>(self, location)</dt><dd><tt>Return&nbsp;a&nbsp;<a href="#Direction">Direction</a>&nbsp;from&nbsp;self&nbsp;to&nbsp;location.&nbsp;It&nbsp;will&nbsp;round&nbsp;to&nbsp;the&nbsp;most<br>
+closest&nbsp;cardinal&nbsp;direction.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;location&nbsp;we&nbsp;are&nbsp;trying&nbsp;to&nbsp;find&nbsp;the&nbsp;direction&nbsp;to<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Direction">Direction</a>:&nbsp;The&nbsp;direction&nbsp;to&nbsp;the&nbsp;location</tt></dd></dl>
+
+<dl><dt><a name="Location-distance_to"><strong>distance_to</strong></a>(self, location)</dt><dd><tt>Return&nbsp;Euclidean&nbsp;distance&nbsp;from&nbsp;self&nbsp;to&nbsp;other&nbsp;location.<br>
+This&nbsp;is&nbsp;sqrt(deltax^2+deltay^2)<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;location&nbsp;we&nbsp;are&nbsp;trying&nbsp;to&nbsp;find&nbsp;the&nbsp;distance&nbsp;to<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;Distance&nbsp;squared&nbsp;to&nbsp;the&nbsp;location</tt></dd></dl>
+
+<dl><dt><a name="Location-distance_to_squared"><strong>distance_to_squared</strong></a>(self, location)</dt><dd><tt>Return&nbsp;squared&nbsp;distance&nbsp;from&nbsp;self&nbsp;to&nbsp;other&nbsp;location.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;location&nbsp;we&nbsp;are&nbsp;trying&nbsp;to&nbsp;find&nbsp;the&nbsp;distance&nbsp;to<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;Distance&nbsp;squared&nbsp;to&nbsp;the&nbsp;location</tt></dd></dl>
+
+<dl><dt><a name="Location-is_adjacent"><strong>is_adjacent</strong></a>(self, location)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;a&nbsp;tile&nbsp;is&nbsp;adjacent&nbsp;to&nbsp;given&nbsp;location.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;location&nbsp;we&nbsp;are&nbsp;trying&nbsp;to&nbsp;find&nbsp;if&nbsp;adjacent<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;adjacent&nbsp;else&nbsp;false</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Location-__new__"><strong>__new__</strong></a>(cls, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>x</strong></dt>
+</dl>
+<dl><dt><strong>y</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="__builtin__.html#tuple">__builtin__.tuple</a>:<br>
+<dl><dt><a name="Location-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="Location-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="Location-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="Location-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Location-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="Location-__getnewargs__"><strong>__getnewargs__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Location-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="Location-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="Location-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="Location-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="Location-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="Location-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="Location-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="Location-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="Location-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#Location-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="Location-count"><strong>count</strong></a>(...)</dt><dd><tt>T.<a href="#Location-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Location-index"><strong>index</strong></a>(...)</dt><dd><tt>T.<a href="#Location-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Map">class <strong>Map</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;representation&nbsp;of&nbsp;the&nbsp;<a href="#Game">Game</a>&nbsp;<a href="#Map">Map</a>.<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;height&nbsp;(int):&nbsp;The&nbsp;max&nbsp;height,&nbsp;y.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width&nbsp;(int):&nbsp;The&nbsp;max&nbsp;width,&nbsp;x.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tiles&nbsp;([string]):&nbsp;An&nbsp;array&nbsp;for&nbsp;the&nbsp;type&nbsp;of&nbsp;tile&nbsp;at&nbsp;each&nbsp;location.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sector_size&nbsp;(int):&nbsp;The&nbsp;size&nbsp;of&nbsp;each&nbsp;sector<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Map-__init__"><strong>__init__</strong></a>(self, state, height, width, tiles, sector_size)</dt></dl>
+
+<dl><dt><a name="Map-location_on_map"><strong>location_on_map</strong></a>(self, location)</dt><dd><tt>Checks&nbsp;whether&nbsp;a&nbsp;given&nbsp;location&nbsp;exists&nbsp;on&nbsp;this&nbsp;map.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;the&nbsp;location&nbsp;we&nbsp;want&nbsp;to&nbsp;find&nbsp;out&nbsp;about<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;this&nbsp;location&nbsp;exists&nbsp;on&nbsp;the&nbsp;map.&nbsp;else&nbsp;false</tt></dd></dl>
+
+<dl><dt><a name="Map-sector_at"><strong>sector_at</strong></a>(self, location)</dt><dd><tt>Determine&nbsp;the&nbsp;sector&nbsp;for&nbsp;a&nbsp;given&nbsp;location<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;the&nbsp;location&nbsp;we&nbsp;want&nbsp;to&nbsp;find&nbsp;out&nbsp;about<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sector">Sector</a>:&nbsp;The&nbsp;sector&nbsp;containing&nbsp;this&nbsp;location</tt></dd></dl>
+
+<dl><dt><a name="Map-tile_at"><strong>tile_at</strong></a>(self, location)</dt><dd><tt>Returns&nbsp;the&nbsp;string&nbsp;for&nbsp;the&nbsp;tile&nbsp;at&nbsp;a&nbsp;given&nbsp;<a href="#Location">Location</a><br>
+This&nbsp;throws&nbsp;an&nbsp;assertion&nbsp;error&nbsp;if&nbsp;the&nbsp;location&nbsp;is&nbsp;out&nbsp;of&nbsp;bounds&nbsp;of&nbsp;the<br>
+map.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;(<a href="#Location">Location</a>):&nbsp;the&nbsp;location&nbsp;we&nbsp;want&nbsp;to&nbsp;find&nbsp;out&nbsp;about<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;String:&nbsp;The&nbsp;string&nbsp;describing&nbsp;the&nbsp;tile&nbsp;type.&nbsp;Either&nbsp;'G'&nbsp;or&nbsp;'D'</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sector">class <strong>Sector</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Representation&nbsp;of&nbsp;a&nbsp;sector&nbsp;on&nbsp;the&nbsp;map<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;top_left&nbsp;(<a href="#Location">Location</a>):&nbsp;<a href="#Location">Location</a>&nbsp;of&nbsp;top_left&nbsp;corner&nbsp;of&nbsp;sector.&nbsp;This&nbsp;is&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max&nbsp;y&nbsp;and&nbsp;min&nbsp;x&nbsp;of&nbsp;the&nbsp;square.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;team&nbsp;(<a href="#Team">Team</a>):&nbsp;the&nbsp;team&nbsp;controlling&nbsp;this&nbsp;sector.&nbsp;If&nbsp;neither&nbsp;player&nbsp;team&nbsp;controls<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this&nbsp;sector&nbsp;then&nbsp;the&nbsp;neutral&nbsp;team&nbsp;will&nbsp;control&nbsp;it<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Sector-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Sector-__init__"><strong>__init__</strong></a>(self, state, top_left)</dt><dd><tt>Do&nbsp;not&nbsp;touch&nbsp;this&nbsp;function.&nbsp;It&nbsp;initializes&nbsp;sectors&nbsp;before&nbsp;the&nbsp;game<br>
+starts</tt></dd></dl>
+
+<dl><dt><a name="Sector-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Sector-entities_in_sector"><strong>entities_in_sector</strong></a>(self)</dt><dd><tt>returns&nbsp;an&nbsp;iterator&nbsp;for&nbsp;entities&nbsp;in&nbsp;this&nbsp;sector<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Entities:&nbsp;entities&nbsp;in&nbsp;this&nbsp;sector</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="State">class <strong>State</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;is&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;game&nbsp;at&nbsp;this&nbsp;turn<br>
+It&nbsp;contains&nbsp;all&nbsp;of&nbsp;the&nbsp;important,&nbsp;and&nbsp;generated&nbsp;by&nbsp;the&nbsp;game.<br>
+Do&nbsp;not&nbsp;modify&nbsp;any&nbsp;thing&nbsp;in&nbsp;this&nbsp;directly<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;(<a href="#Map">Map</a>):&nbsp;This&nbsp;is&nbsp;the&nbsp;map<br>
+&nbsp;&nbsp;&nbsp;&nbsp;turn&nbsp;(int):&nbsp;The&nbsp;turn&nbsp;number&nbsp;in&nbsp;this&nbsp;state<br>
+&nbsp;&nbsp;&nbsp;&nbsp;teams&nbsp;([Teams]):&nbsp;An&nbsp;array&nbsp;of&nbsp;teams&nbsp;indexed&nbsp;by&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;my_team&nbsp;(<a href="#Team">Team</a>):&nbsp;My&nbsp;team<br>
+&nbsp;&nbsp;&nbsp;&nbsp;my_team_id&nbsp;(int):&nbsp;The&nbsp;id&nbsp;of&nbsp;my&nbsp;team<br>
+&nbsp;&nbsp;&nbsp;&nbsp;speculate&nbsp;(bool):&nbsp;Pretends&nbsp;that&nbsp;the&nbsp;engine&nbsp;is&nbsp;running&nbsp;locally&nbsp;so&nbsp;it<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;makes&nbsp;sure&nbsp;the&nbsp;code&nbsp;is&nbsp;good.&nbsp;Don't&nbsp;teach.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="State-__init__"><strong>__init__</strong></a>(self, game, teams, my_team_id, initialState)</dt></dl>
+
+<dl><dt><a name="State-get_entities"><strong>get_entities</strong></a>(self, entity_id<font color="#909090">=-1</font>, entity_type<font color="#909090">=None</font>, location<font color="#909090">=None</font>, team<font color="#909090">=None</font>)</dt><dd><tt>Get&nbsp;an&nbsp;iterator&nbsp;of&nbsp;all&nbsp;the&nbsp;entities.<br>
+Can&nbsp;filter&nbsp;with&nbsp;the&nbsp;parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entity_id&nbsp;gets&nbsp;the&nbsp;entity&nbsp;with&nbsp;a&nbsp;given&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entity_type&nbsp;filters&nbsp;to&nbsp;only&nbsp;entities&nbsp;of&nbsp;a&nbsp;given&nbsp;type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;team&nbsp;filters&nbsp;all&nbsp;entities&nbsp;are&nbsp;part&nbsp;of&nbsp;a&nbsp;given&nbsp;team</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>turn_next_spawn</strong></dt>
+<dd><tt>Turn&nbsp;when&nbsp;next&nbsp;spawn&nbsp;occurs</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Team">class <strong>Team</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Information&nbsp;about&nbsp;the&nbsp;teams<br>
+This&nbsp;is&nbsp;immutable,&nbsp;please&nbsp;don't&nbsp;touch&nbsp;this.&nbsp;Or&nbsp;your&nbsp;bot&nbsp;will&nbsp;break.<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;(int):&nbsp;The&nbsp;id,&nbsp;index,&nbsp;of&nbsp;the&nbsp;team<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;(string):&nbsp;the&nbsp;string&nbsp;name&nbsp;of&nbsp;the&nbsp;team<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Team-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Team-__init__"><strong>__init__</strong></a>(self, id, name)</dt></dl>
+
+<dl><dt><a name="Team-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Team-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BUILD_DELAY</strong> = 10<br>
+<strong>DEFAULT_SERVER</strong> = ('localhost', 6147)<br>
+<strong>DIRT</strong> = 'D'<br>
+<strong>GRASS</strong> = 'G'<br>
+<strong>MOVEMENT_DELAY</strong> = 1<br>
+<strong>PICKUP_DELAY</strong> = 0<br>
+<strong>THROW_DELAY</strong> = 10<br>
+<strong>THROW_ENTITY_DAMAGE</strong> = 4<br>
+<strong>THROW_ENTITY_DIRT</strong> = 1<br>
+<strong>THROW_ENTITY_RECOIL</strong> = 2<br>
+<strong>THROW_RANGE</strong> = 7<br>
+<strong>print_function</strong> = _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 65536)</td></tr></table>
+</body></html>

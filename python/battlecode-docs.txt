@@ -1,0 +1,693 @@
+Help on module battlecode:
+
+NAME
+    battlecode
+
+FILE
+    /home/joshua/Battlecode/hackathon-starter/python/battlecode.py
+
+CLASSES
+    __builtin__.object
+        Direction
+        Entity
+        Game
+        Map
+        Sector
+        State
+        Team
+    __builtin__.tuple(__builtin__.object)
+        Location
+    exceptions.Exception(exceptions.BaseException)
+        BattlecodeError
+    
+    class BattlecodeError(exceptions.Exception)
+     |  Method resolution order:
+     |      BattlecodeError
+     |      exceptions.Exception
+     |      exceptions.BaseException
+     |      __builtin__.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, *args, **kwargs)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from exceptions.Exception:
+     |  
+     |  __new__ = <built-in method __new__ of type object>
+     |      T.__new__(S, ...) -> a new object with type S, a subtype of T
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from exceptions.BaseException:
+     |  
+     |  __delattr__(...)
+     |      x.__delattr__('name') <==> del x.name
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __reduce__(...)
+     |  
+     |  __repr__(...)
+     |      x.__repr__() <==> repr(x)
+     |  
+     |  __setattr__(...)
+     |      x.__setattr__('name', value) <==> x.name = value
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(...)
+     |      x.__str__() <==> str(x)
+     |  
+     |  __unicode__(...)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from exceptions.BaseException:
+     |  
+     |  __dict__
+     |  
+     |  args
+     |  
+     |  message
+    
+    class Direction(__builtin__.object)
+     |  This is an enum for direction
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, other)
+     |  
+     |  __init__(self, dx, dy)
+     |      Initialize a Direction with given delta x and delta y.
+     |      Args:
+     |          dx (int): the delta in the x direction which has to be in range 1,0,-1
+     |          dy (int): the delta in the y direction which has to be in range 1,0,-1
+     |      
+     |      Returns:
+     |          Direction: A new direction with given dx and dy
+     |  
+     |  rotate_counter_clockwise_degrees(self, degrees)
+     |      Rotate an angle by given number of degrees.
+     |      Args:
+     |           degree (int): degree to rotate counter clockwise by. Must be
+     |                      degree%45==0
+     |      
+     |      Returns:
+     |          Direction: a new rotated Direction
+     |  
+     |  rotate_left(self)
+     |      Return a direction that is 90 degrees left from the original.
+     |      Returns:
+     |          Direction: A new Direction rotated 90 degrees to the left
+     |  
+     |  rotate_opposite(self)
+     |      Return a direction that is 180 degrees rotated from the original.
+     |      Returns:
+     |          Direction: A new direction opposite to the original
+     |  
+     |  rotate_right(self)
+     |      Return a direction that is 90 degrees right from the original.
+     |      Returns:
+     |          Direction: A new Direction rotated 90 degrees to the right
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  all()
+     |      returns an generator to Directions
+     |      Returns:
+     |          Direction: An generator of all compass directions
+     |  
+     |  directions()
+     |      returns an array of all compass directions. It starts with SOUTH_WEST
+     |      and proceeds counter-clockwise around the compass.
+     |      This array is deterministic.
+     |      Returns:
+     |          [Direction]: An array of all compass directions
+     |  
+     |  from_delta(dx, dy)
+     |      Initializes a Direction from a delta dx, dy. This finds the cardinal
+     |      direction closest to the desired delta.
+     |      Args:
+     |          dx (int): delta in x direction
+     |          dy (int): delta in y direction
+     |          Both arguments cannot be zero
+     |      Returns:
+     |          Direction: a new Direction for that delta
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  EAST = <battlecode.Direction object>
+     |  
+     |  NORTH = <battlecode.Direction object>
+     |  
+     |  NORTH_EAST = <battlecode.Direction object>
+     |  
+     |  NORTH_WEST = <battlecode.Direction object>
+     |  
+     |  SOUTH = <battlecode.Direction object>
+     |  
+     |  SOUTH_EAST = <battlecode.Direction object>
+     |  
+     |  SOUTH_WEST = <battlecode.Direction object>
+     |  
+     |  WEST = <battlecode.Direction object>
+    
+    class Entity(__builtin__.object)
+     |  An entity in the world: a Thrower, Hedge, or Statue.
+     |  
+     |  Do not modify the properties of this object; it won't do anything
+     |  Instead, call the queue functions such as entity.queue_move() and other
+     |  methods to tell the game to do something next turn.
+     |  Attributes:
+     |      id (int): the id of a entity
+     |      type (string): String type of a given entity
+     |      team (Team): team of entity
+     |      hp (int): hp of entity
+     |      cooldown_end (int): turn when cooldown is 0
+     |      held_by (Entity): Entity holding this object. If not held held_by is
+     |                        None
+     |      holding (Entity): Entity held by this. If nothing is held holding is
+     |                        None
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, other)
+     |  
+     |  __init__(self, state)
+     |      Do not initialize new entities. This will cause errors in your
+     |      bot.
+     |  
+     |  __ne__(self, other)
+     |  
+     |  __repr__(self)
+     |  
+     |  __str__(self)
+     |  
+     |  can_build(self, direction)
+     |      This is true if there is no object in the adjacent tile in that
+     |      direction and the tile is on the map.
+     |      Args:
+     |          direction (Direction): Direction this entity desires to build in
+     |      Returns:
+     |          bool: True if a unit can build in this direction
+     |  
+     |  can_move(self, direction)
+     |      Args:
+     |          direction (Direction): Direction this entity desires to move in
+     |      Returns:
+     |          bool: True if a unit can move in this direction
+     |  
+     |  can_pickup(self, entity)
+     |      This is true if the other entity can be picked up which means.
+     |      The entity cannot be self.
+     |      Self cannot be holding anything, and the entity cannot be held
+     |      The two entities must be adjacent.
+     |      The entity cannot has to be a THROWER.
+     |      Args:
+     |          entity (Entity): The entity this entity desires to pickup
+     |      Returns:
+     |          bool: True if this can pickup said entity
+     |  
+     |  can_throw(self, direction)
+     |      To throw an entity.
+     |      Self has to be holding a unit and self has to be able to act.
+     |      The adjacent square in the given direction has to be on the map and not
+     |      occupied.
+     |      
+     |      Args:
+     |          direction (Direction): Direction this entity desires to throw its
+     |                                 held entity
+     |      Returns:
+     |          bool: True if this entity thrown in given direction
+     |  
+     |  entities_within_adjacent_distance(self, distance, include_held=False, iterator=None)
+     |      Returns all the entities within a certain adjacency distance from this
+     |      bot as an generator.
+     |      Adjacency distance is the number of adjacent blocks needed to traverse
+     |      to get to a tile, which is equivalent to max(abs(deltax), abs(deltay))
+     |      Args:
+     |          distance (float): returns all entities with distance less than <=
+     |                            distance
+     |      
+     |      Options Args:
+     |          include_held (bool): Defaults to false. If true held units will be
+     |                                included in the iterator
+     |          iterator (iterator or list): A subset of bots to iterate through.
+     |                                       Will only search the bots in this
+     |                                       iterator
+     |      
+     |      Returns:
+     |          [Entities]: Returns a generator for the entities within distance of
+     |                      of this robot
+     |  
+     |  entities_within_euclidean_distance(self, distance, include_held=False, iterator=None)
+     |      Returns all the entities within a certain Euclidean distance from this
+     |      bot as an generator.
+     |      Euclidean distance is defined as sqrt(deltax^2+deltay^2)
+     |      Not to be confused with displacement difference, which is
+     |      max(deltax,deltay)
+     |      Args:
+     |          distance (float): returns all entities with distance less than <=
+     |                            distance
+     |      
+     |      Options Args:
+     |          include_held (bool): Defaults to false. If true held units will be
+     |                                included in the iterator
+     |          iterator (iterator or list): A subset of bots to iterate through.
+     |                                       Will only search the bots in this
+     |                                       iterator
+     |      
+     |      Returns:
+     |          [Entities]: Returns a generator for the entities within distance of
+     |                      of this robot
+     |  
+     |  queue_build(self, direction)
+     |      Queues build to take place next turn. Throws an assertion error if cannot
+     |      build in given direction.
+     |      Args:
+     |          direction (Direction): Direction this entity desires to build in
+     |  
+     |  queue_disintegrate(self)
+     |      Queues a disintegration, so that this object will disintegrate in the
+     |      next turn.
+     |  
+     |  queue_move(self, direction)
+     |      Queues Move to take place next turn. Throws an assertion error if cannot
+     |      move in given direction.
+     |      Args:
+     |          direction (Direction): Direction this entity desires to move in
+     |  
+     |  queue_pickup(self, entity)
+     |      Queues this to pickup entity next turn. If this cannot pickup entity
+     |      will throw an assertion error.
+     |      Args:
+     |          entity (Entity): The entity this entity desires to pickup
+     |  
+     |  queue_throw(self, direction)
+     |      Queue this entity to throw a bot in given direction next turn. If this
+     |      cannot throw, will throw an assertion.
+     |      Args:
+     |          direction (Direction): Direction this entity desires to throw its
+     |                                 held entity
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  can_act
+     |      Returns:
+     |          bool: True if this unit can perform actions this turn.
+     |  
+     |  can_be_picked
+     |      Returns:
+     |          bool: True if this entity can be picked up
+     |  
+     |  cooldown
+     |      Returns:
+     |          int: The number of turns left in this entity's cooldown. If
+     |             there is no cooldown then is a 0.
+     |  
+     |  is_hedge
+     |      Returns:
+     |          bool: True if a entity is a HEDGE else False.
+     |  
+     |  is_held
+     |      Returns:
+     |          bool: True if held by an entity else False
+     |  
+     |  is_holding
+     |      Returns:
+     |          bool: True if holding an entity else False
+     |  
+     |  is_statue
+     |      Returns:
+     |          bool: True if a entity is a STATUE else False.
+     |  
+     |  is_thrower
+     |      Returns:
+     |          bool: True if a entity is a THROWER else False.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  HEDGE = 'hedge'
+     |  
+     |  STATUE = 'statue'
+     |  
+     |  THROWER = 'thrower'
+    
+    class Game(__builtin__.object)
+     |  This is the game that is being played.
+     |  Running the init connects your code to the engine to play the game
+     |  Create a for loop which iterates through game.turns to play the game. It
+     |  will give a state for each turn with which you can see and perform
+     |  actions.
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, name, server=('localhost', 6147))
+     |      Connect to the server and wait for the first turn.
+     |      name is the name this bot would like to be called; it will be ignored on the
+     |      scrimmage server.
+     |      Server is the address to connect to. Leave it as None to connect to a default local
+     |      server; you shouldn't need to mess with it unless you're making custom matchmaking stuff.
+     |  
+     |  next_turn(self)
+     |      Submit queued actions, and wait for our next turn.
+     |  
+     |  turns(self, copy=True, speculate=True)
+     |      Returns an iterator. You should for loop over this function to get a
+     |      copy of state for each turn.
+     |      Returns:
+     |          State: a state that you can play on
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+    
+    class Location(__builtin__.tuple)
+     |  An x,y tuple representing a location in the world.
+     |  This class is immutable.
+     |  Attributes:
+     |      x (int): x coordinate of location
+     |      y (int): y coordinate of location
+     |  
+     |  Method resolution order:
+     |      Location
+     |      __builtin__.tuple
+     |      __builtin__.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, other)
+     |  
+     |  __hash__(...)
+     |      x.__hash__() <==> hash(x)
+     |  
+     |  __repr__(self)
+     |  
+     |  __str__(self)
+     |  
+     |  adjacent_distance_to(self, location)
+     |      Return adjacent distance from self to other location.
+     |      This is defined as max(abs(deltax),abs(deltay)), and is the number of
+     |      adjacent moves needed to get to a location.
+     |      Args:
+     |          location (Location): location we are trying to find the distance to
+     |      Returns:
+     |          float: Distance squared to the location
+     |  
+     |  adjacent_location_in_direction(self, direction)
+     |      Returns the location the is adjacent to a this in a certain direction.
+     |      Args:
+     |          direction (Direction): Direction that adjacency is desired
+     |      Returns:
+     |          Location: Location of the adjacent tile. Note this is not
+     |                    necessarily on the map.
+     |  
+     |  direction_to(self, location)
+     |      Return a Direction from self to location. It will round to the most
+     |      closest cardinal direction.
+     |      Args:
+     |          location (Location): location we are trying to find the direction to
+     |      Returns:
+     |          Direction: The direction to the location
+     |  
+     |  distance_to(self, location)
+     |      Return Euclidean distance from self to other location.
+     |      This is sqrt(deltax^2+deltay^2)
+     |      Args:
+     |          location (Location): location we are trying to find the distance to
+     |      Returns:
+     |          float: Distance squared to the location
+     |  
+     |  distance_to_squared(self, location)
+     |      Return squared distance from self to other location.
+     |      Args:
+     |          location (Location): location we are trying to find the distance to
+     |      Returns:
+     |          int: Distance squared to the location
+     |  
+     |  is_adjacent(self, location)
+     |      Return True if a tile is adjacent to given location.
+     |      Args:
+     |          location (Location): location we are trying to find if adjacent
+     |      Returns:
+     |          bool: True if adjacent else false
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(cls, x=None, y=None)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  x
+     |  
+     |  y
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from __builtin__.tuple:
+     |  
+     |  __add__(...)
+     |      x.__add__(y) <==> x+y
+     |  
+     |  __contains__(...)
+     |      x.__contains__(y) <==> y in x
+     |  
+     |  __ge__(...)
+     |      x.__ge__(y) <==> x>=y
+     |  
+     |  __getattribute__(...)
+     |      x.__getattribute__('name') <==> x.name
+     |  
+     |  __getitem__(...)
+     |      x.__getitem__(y) <==> x[y]
+     |  
+     |  __getnewargs__(...)
+     |  
+     |  __getslice__(...)
+     |      x.__getslice__(i, j) <==> x[i:j]
+     |      
+     |      Use of negative indices is not supported.
+     |  
+     |  __gt__(...)
+     |      x.__gt__(y) <==> x>y
+     |  
+     |  __iter__(...)
+     |      x.__iter__() <==> iter(x)
+     |  
+     |  __le__(...)
+     |      x.__le__(y) <==> x<=y
+     |  
+     |  __len__(...)
+     |      x.__len__() <==> len(x)
+     |  
+     |  __lt__(...)
+     |      x.__lt__(y) <==> x<y
+     |  
+     |  __mul__(...)
+     |      x.__mul__(n) <==> x*n
+     |  
+     |  __ne__(...)
+     |      x.__ne__(y) <==> x!=y
+     |  
+     |  __rmul__(...)
+     |      x.__rmul__(n) <==> n*x
+     |  
+     |  count(...)
+     |      T.count(value) -> integer -- return number of occurrences of value
+     |  
+     |  index(...)
+     |      T.index(value, [start, [stop]]) -> integer -- return first index of value.
+     |      Raises ValueError if the value is not present.
+    
+    class Map(__builtin__.object)
+     |  A representation of the Game Map.
+     |  Attributes:
+     |      height (int): The max height, y.
+     |      width (int): The max width, x.
+     |      tiles ([string]): An array for the type of tile at each location.
+     |      sector_size (int): The size of each sector
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, state, height, width, tiles, sector_size)
+     |  
+     |  location_on_map(self, location)
+     |      Checks whether a given location exists on this map.
+     |      Args:
+     |          location (Location): the location we want to find out about
+     |      Returns:
+     |          bool: True if this location exists on the map. else false
+     |  
+     |  sector_at(self, location)
+     |      Determine the sector for a given location
+     |      Args:
+     |          location (Location): the location we want to find out about
+     |      Returns:
+     |          Sector: The sector containing this location
+     |  
+     |  tile_at(self, location)
+     |      Returns the string for the tile at a given Location
+     |      This throws an assertion error if the location is out of bounds of the
+     |      map.
+     |      Args:
+     |          location (Location): the location we want to find out about
+     |      Returns:
+     |          String: The string describing the tile type. Either 'G' or 'D'
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+    
+    class Sector(__builtin__.object)
+     |  Representation of a sector on the map
+     |  Attributes:
+     |      top_left (Location): Location of top_left corner of sector. This is the
+     |                           max y and min x of the square.
+     |      team (Team): the team controlling this sector. If neither player team controls
+     |                   this sector then the neutral team will control it
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, other)
+     |  
+     |  __init__(self, state, top_left)
+     |      Do not touch this function. It initializes sectors before the game
+     |      starts
+     |  
+     |  __ne__(self, other)
+     |  
+     |  entities_in_sector(self)
+     |      returns an iterator for entities in this sector
+     |      Returns:
+     |          Entities: entities in this sector
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+    
+    class State(__builtin__.object)
+     |  This is the state of the game at this turn
+     |  It contains all of the important, and generated by the game.
+     |  Do not modify any thing in this directly
+     |  Attributes:
+     |      map (Map): This is the map
+     |      turn (int): The turn number in this state
+     |      teams ([Teams]): An array of teams indexed by id
+     |      my_team (Team): My team
+     |      my_team_id (int): The id of my team
+     |      speculate (bool): Pretends that the engine is running locally so it
+     |                        makes sure the code is good. Don't teach.
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, game, teams, my_team_id, initialState)
+     |  
+     |  get_entities(self, entity_id=-1, entity_type=None, location=None, team=None)
+     |      Get an iterator of all the entities.
+     |      Can filter with the parameters:
+     |          entity_id gets the entity with a given id
+     |          entity_type filters to only entities of a given type
+     |          team filters all entities are part of a given team
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  turn_next_spawn
+     |      Turn when next spawn occurs
+    
+    class Team(__builtin__.object)
+     |  Information about the teams
+     |  This is immutable, please don't touch this. Or your bot will break.
+     |  Attributes:
+     |      id (int): The id, index, of the team
+     |      name (string): the string name of the team
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, other)
+     |  
+     |  __init__(self, id, name)
+     |  
+     |  __repr__(self)
+     |  
+     |  __str__(self)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+DATA
+    BUILD_DELAY = 10
+    DEFAULT_SERVER = ('localhost', 6147)
+    DIRT = 'D'
+    GRASS = 'G'
+    MOVEMENT_DELAY = 1
+    PICKUP_DELAY = 0
+    THROW_DELAY = 10
+    THROW_ENTITY_DAMAGE = 4
+    THROW_ENTITY_DIRT = 1
+    THROW_ENTITY_RECOIL = 2
+    THROW_RANGE = 7
+    print_function = _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0)...
+
+
