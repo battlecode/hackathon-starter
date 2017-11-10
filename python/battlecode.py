@@ -203,6 +203,7 @@ class Entity(object):
         type (string): String type of a given entity
         team (Team): team of entity
         hp (int): hp of entity
+        location (Location): The location of the entity it is never NONE
         cooldown_end (int): turn when cooldown is 0
         held_by (Entity): Entity holding this object. If not held held_by is
                           None
