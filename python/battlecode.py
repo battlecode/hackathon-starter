@@ -138,7 +138,7 @@ class Direction(object):
         Returns:
             Direction: A new Direction rotated 90 degrees to the left
         '''
-        return direction.rotate_counter_clockwise_degrees(90)
+        return self.rotate_counter_clockwise_degrees(90)
 
     def rotate_right(self):
         '''
@@ -146,7 +146,7 @@ class Direction(object):
         Returns:
             Direction: A new Direction rotated 90 degrees to the right
         '''
-        return direction.rotate_counter_clockwise_degrees(270)
+        return self.rotate_counter_clockwise_degrees(270)
 
     def rotate_opposite(self):
         '''
@@ -154,7 +154,7 @@ class Direction(object):
         Returns:
             Direction: A new direction opposite to the original
         '''
-        return direction.rotate_counter_clockwise_degrees(180)
+        return self.rotate_counter_clockwise_degrees(180)
 
     def rotate_counter_clockwise_degrees(self, degrees):
         '''Rotate an angle by given number of degrees.
