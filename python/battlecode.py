@@ -1088,12 +1088,12 @@ class State(object):
 
     def _kill_entities(self, entities):
         for dead in entities:
-            ent = self.entities[dead]
-            if(ent.held_by == None):
-                if self.map._occupied[ent.location].id == ent.id:
-                    if ent.location in self.map._occupied:
-                        del self.map._occupied[ent.location]
             if dead in self.entities:
+                ent = self.entities[dead]
+                if(ent.held_by == None):
+                    if self.map._occupied[ent.location].id == ent.id:
+                        if ent.location in self.map._occupied:
+                            del self.map._occupied[ent.location]
                 del self.entities[dead]
 
     def _validate(self):
