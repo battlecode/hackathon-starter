@@ -1241,6 +1241,7 @@ class Game(object):
                 self._recv_queue.put(None)
                 return
 
+            message = message.decode()
             result = json.loads(message)
 
             if "command" not in result:
